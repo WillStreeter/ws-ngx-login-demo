@@ -1,0 +1,85 @@
+
+@import '../../../../scss/vendor';
+
+:host {
+    display:flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.reg-card{
+  margin-top:$toolBarHeight;
+  margin-bottom:$toolBarHeight;
+  min-width:350px;
+  max-width:50%;
+  @include  radial-gradient($dry-color, darken($dry-color,3%), vertical);
+}
+
+.form-direction{
+  text-align:center;
+  font-size:1.5em;
+  font-weight: 700;
+  color :lighten($soil-color, 6%);
+  small{
+    width:60%;
+    font-size:.65em;
+    font-weight: 200;
+      color:$corn-color;
+  }
+}
+
+.error {
+  color : $rock-color;
+}
+
+.reg-card{
+  min-width:350px;
+  max-width:65%;
+}
+.reg-input-container.mat-focused .reg-placeholder-label{
+  color : $corn-color;
+}
+
+.reg-btn{
+   color : $dry-color;
+   background-color: $soil-color;
+   background: $soil-color;
+}
+
+.reg-card md-card-header{
+  height:50px;
+  margin-bottom:25px;
+}
+
+.reg-card-title  h1{
+   font-size:2.5em;
+   font-weight: 100;
+   color :lighten($soil-color, 6%);
+   font-family: $font-family-roboto;
+}
+
+.reg-new-user{
+   display: inline-flex;
+   width:100%;
+   text-align: center;   /* establish flex container */
+   flex-direction: column;  /* make main axis vertical */
+   justify-content: center; /* center items vertically, in this case */
+   align-items: center;
+}
+
+
+.reg-input-container{
+   font-size:20px;
+   display: flex;
+   flex-direction: row;
+   width: 65%;
+   align-items: center;
+   padding-left:0.35em;
+   padding-right:0.35em;
+   color:$soil-color;
+}
+.reg-placeholder-label{
+   color :lighten($soil-color, 6%);
+}
+

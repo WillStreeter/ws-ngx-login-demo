@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "commonjs",
+    "declaration": false,
+    "removeComments": true,
+    "noLib": false,
+    "lib": ["es2016", "dom"],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "pretty": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "noImplicitUseStrict": false,
+    "noFallthroughCasesInSwitch": true,
+    "typeRoots": [
+      "../.",
+      "../../node_modules/@types",
+      "../../node_modules"
+    ],
+    "types": [
+      "express",
+      "jasmine",
+      "node",
+      "protractor",
+      "systemjs"
+    ]
+  },
+  "exclude": [
+    "node_modules/**/*spec.js",
+    "/base/node_modules/node_modules/**/*specs.js",
+    "node_modules",
+    "dist",
+    "src"
+  ],
+  "compileOnSave": false
+}

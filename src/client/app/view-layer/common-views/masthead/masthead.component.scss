@@ -1,0 +1,44 @@
+@import '../../../../scss/vendor';
+
+
+
+
+.nav-link.active-btn{
+  color:darken($perlblue-color, 1%);
+}
+
+button.mat-button{
+  background-color: transparent;
+  backgroundcolor: transparent;
+  font-size:1em;
+  line-height:36px;
+  font-weight: 500;
+  color:$soil-color;
+  &:hover{
+    color:$dirt-color;
+  }
+  &:active{
+    color:lighten($perlblue-color, 1%);
+  }
+}
+
+
+a.nav-link{
+  background-color: transparent;
+  backgroundcolor: transparent;
+  font-size:18px;
+  line-height:36px;
+  font-weight: 500;
+  color:$soil-color;
+  &:hover{
+    color:$dirt-color;
+  }
+  &:active{
+    color:lighten($perlblue-color, 1%);
+  }
+}
+
+md-toolbar.md-mainNav-theme{
+  @include  radial-gradient($dry-color, darken($dry-color,3%), vertical);
+}
+

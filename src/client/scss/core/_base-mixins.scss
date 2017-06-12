@@ -1,0 +1,13 @@
+@mixin radial-gradient($start-color, $end-color, $orientation) {
+  background: $start-color;
+  @if $orientation == 'vertical' {
+    background: -webkit-linear-gradient(top,  $start-color 0%, $end-color 100%);
+    background: linear-gradient(to bottom,  $start-color 0%, $end-color 100%);
+  } @else if $orientation == 'horizontal' {
+    background: -webkit-linear-gradient(left,  $start-color 0%, $end-color 100%);
+    background: linear-gradient(to right,  $start-color 0%, $end-color 100%);
+  } @else {
+    background: -webkit-radial-gradient(center, ellipse cover,  $start-color 5%, $end-color 100%);
+    background: radial-gradient(ellipse at center,  $start-color 5%, $end-color 100%);
+  }
+}

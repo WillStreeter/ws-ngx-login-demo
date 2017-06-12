@@ -1,0 +1,47 @@
+<div  class="login-dialog" fxLayout="column" fxFlex >
+  <div class="login-card-title">
+      <h1 class="md-dialog-title"> LogIn</h1>
+  </div>
+  <md-dialog-content>
+      <form role="form" (submit)="login()" flex fxLayout="column"  fxLayoutAlign="center center">
+        <md-input-container class="login-input-container">
+          <input mdInput class="login-input"
+                 autofocus
+                 type="text"
+                (keyup)="onLoginKeyUp()"
+                 required [(ngModel)]="user.username"
+                 id="username"
+                 name="username"
+                 maxlength="15">
+          <md-placeholder class="login-ph">
+            <i class="material-icons app-input-icon">face</i>Username
+          </md-placeholder>
+        </md-input-container>
+        <br>
+       <md-input-container class="login-input-container">
+        <input mdInput type="password"
+               required
+                (keyup)="onLoginKeyUp()"
+               [(ngModel)]="user.password"
+               id="password"
+               name="password"
+               axlength="15">
+        <md-placeholder>
+          <i class="material-icons app-input-icon">lock_open</i>Password
+        </md-placeholder>
+       </md-input-container>
+       <br>
+        <div fxLayout="column" fxLayoutAlign="center center" >
+              <button md-raised-button class="login-btn" type="submit" name="action">
+                 LOGIN
+              </button>
+               <span class="err"> <br><small>{{errorMsg}}</small> <br></span>
+        </div>
+        </form>
+        <div fxFlexlayout="row" fxLayoutAlign="center center">
+           <div  fxFlex="40">
+               <a md-button (click)="registrationRequest()" class="registration-label"  fxFlex fxLayout="column" fxLayoutAlign="center center">Register</a>
+           </div>
+        </div>
+  </md-dialog-content>
+</div>

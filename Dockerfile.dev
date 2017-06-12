@@ -1,0 +1,31 @@
+FROM willsonic/ws-typescript-development:v1.0.0
+
+ENV UI_CLIENT_PORT 5555
+ENV LIVERELOAD_UI_CLIENT_PORT 3001
+
+EXPOSE $UI_CLIENT_PORT
+EXPOSE $LIVERELOAD_UI_CLIENT_PORT
+
+RUN mkdir -p /app/dist \
+  && mkdir -p /app/tools \
+  && mkdir -p /app/resources \
+  && mkdir -p /app/node_modules \
+  && mkdir -p /app/src
+
+COPY test-config.js /app/test-config.js
+COPY test-main.js /app/test-main.js
+COPY karma.conf.js /app/karma.conf.js
+COPY protractor.conf.js /app/protractor.conf.js
+COPY tslint.json /app/tslint.json
+COPY package.json /app/package.json
+COPY tsconfig.json /app/tsconfig.json
+COPY tools /app/tools
+COPY gulpfile.ts /app/gulpfile.ts
+COPY src /app/src
+
+WORKDIR /app
+
+RUN npm install && gulp build.bundle.rxjs
+
+CMD ["npm",  "start"]
+#ENTRYPOINT ["/bin/sh", "-c", "while true; do sleep 1; done"]
