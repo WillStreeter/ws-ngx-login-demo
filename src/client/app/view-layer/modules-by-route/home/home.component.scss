@@ -1,0 +1,33 @@
+@import '../../../../scss/vendor';
+
+:host {
+    display:flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  position: relative;
+  font-family: $font-family-roboto;
+  font-weight: 400;
+  font-size: 0.85em;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 1.55em 3em;
+  margin: 2em 2em;
+  transition: all 0.65s;
+  border-radius: 30px;
+  color: $soil-color;
+  background:$dry-color
+}
+
+.btn:hover {
+  color: $dirt-color;
+  letter-spacing: 3px;
+  background: $corn-color;
+  box-shadow: 5px 30px 60px #888888;
+}

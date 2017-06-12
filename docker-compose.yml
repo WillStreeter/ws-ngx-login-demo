@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+
+  ws-ngx-login-demo:
+    restart: always
+    container_name: ws-ngx-login-demo-container
+    build:
+      context: ./.
+      dockerfile: ./Dockerfile.dev
+    image: local-ws-ngx-login-demo-dev:latest
+    command: ['npm', 'run', 'start']
+    volumes:
+      - ./dist:/app/dist
+      - ./tools:/app/tools
+      - ./src:/app/src
+      - ./yarn.lock:/app/yarn.lock:rw
+      - ./tsconfig.json:/app/tsconfig.json
+      - ./package.json:/app/package.json:rw
+      - ./gulpfile.ts:/app/gulpfile.ts:rw
+    ports:
+      - '5555:5555'
+      - '3001:3001'

@@ -1,0 +1,84 @@
+
+@import '../../../../scss/vendor';
+
+
+.login-dialog{
+   min-width:280px;
+   background-color: lighten($dirt-color, 8%);
+   background:lighten($dirt-color, 8%);
+}
+
+.app-input-icon {
+  font-size: 24px;
+  left:20px;
+  color : $corn-color;
+  padding-left:0.85em;
+  padding-right:0.85em;
+}
+
+.login-ph .mat-focused{
+  color : $corn-color;
+}
+
+.login-btn{
+   color : $soil-color;
+   background-color: $dry-color;
+   background: $dry-color;
+
+}
+
+.err {
+  color : $rock-color;
+}
+
+a.registration-label{
+   font-size:20px;
+   color : $corn-color;
+   margin-bottom:20px;
+   &:hover{
+      color : $dry-color;
+   }
+}
+
+.login-card-title{
+   display: inline-flex;
+   width:100%;
+   text-align: center;   /* establish flex container */
+   flex-direction: column;  /* make main axis vertical */
+   justify-content: center; /* center items vertically, in this case */
+   align-items: center;
+   font-family: $font-family-roboto;
+   color : $dry-color;
+   background-color: darken($dirt-color, 20%);
+   background: darken($dirt-color, 20%);
+  @include  radial-gradient(darken($dirt-color, 10%), lighten($soil-color, 5%),radial);
+}
+
+.login-dialog .login-input-container{
+   font-size:20px;
+   line-height:30px;
+   padding-top:20px;
+   display: inline-flex;
+   flex-direction: row;  /* make main axis vertical */
+   justify-content: center; /* center items vertically, in this case */
+   align-items: center;
+   color:$soil-color;
+}
+
+   input.md-input-element {
+    color: $soil-color;
+  }
+
+  input.mat-input-element{
+      padding-top: 10px;
+      text-align:center;
+  }
+
+
+  .login-dialog .mat-input-underline .mat-input-ripple{
+    background: $soil-color;
+  }
+
+   span.mat-placeholder-required{
+    color: $soil-color;
+   }

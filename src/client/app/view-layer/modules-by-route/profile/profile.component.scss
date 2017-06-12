@@ -1,0 +1,56 @@
+
+@import '../../../../scss/vendor';
+
+:host {
+    display:flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.prfl-view-card{
+  margin-top:$toolBarHeight;
+  margin-bottom:$toolBarHeight;
+  min-width:350px;
+  max-width:50%;
+  @include  radial-gradient($dry-color, darken($dry-color,3%), vertical);
+}
+
+.mat-card-header-text{
+     height:10px !important;
+}
+
+.prfl-view-card .mat-card-header{
+  height:80px;
+}
+
+md-card-title{
+  padding-bottom:20px;
+}
+
+
+.prfl-view-title  h1{
+   font-size:3em;
+   font-weight: 100;
+   color :lighten($soil-color, 6%);
+   font-family: $font-family-roboto;
+}
+
+md-list-item{
+  padding-top:20px;
+  padding-bottom:10px;
+}
+
+md-list-item h3.profile-item-label{
+   font-size:1.75em;
+   font-weight: 100;
+   color :lighten($soil-color, 6%);
+   font-family: $font-family-roboto;
+   small{
+       font-size:.75em;
+       font-weight: 500;
+       color : $noc-color;
+    }
+
+}

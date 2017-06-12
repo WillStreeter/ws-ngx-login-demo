@@ -1,0 +1,36 @@
+<div  class="profile-card-holder"  fxFlex fxLayout="row"  fxLayoutAlign="center center">
+        <md-card class="prfl-view-card" fxFlex fxLayout="column"  fxLayoutAlign="center center">
+           <md-card-header>
+              <md-card-title class="prfl-view-title ">
+                    <h1> User Profile </h1>
+              </md-card-title>
+           </md-card-header>
+           <md-card-content>
+                 <md-list>
+                    <md-list-item>
+                        <h3 class="profile-item-label" md-line>User Name:
+                            <small > {{(userProfile$ | async)?.username}} </small>
+                        </h3>
+                    </md-list-item>
+                    <md-divider></md-divider>
+                    <md-list-item>
+                        <h3 class="profile-item-label" md-line>First Name:
+                            <small > {{(userProfile$ | async)?.firstname}} </small>
+                        </h3>
+                    </md-list-item>
+                    <md-divider></md-divider>
+                    <md-list-item>
+                        <h3 class="profile-item-label" md-line>Last Name:
+                            <small > {{(userProfile$ | async)?.lastname}} </small>
+                        </h3>
+                    </md-list-item>
+                    <md-divider></md-divider>
+                    <md-list-item>
+                        <h3 class="profile-item-label" md-line>Email:
+                            <small > {{(userProfile$ | async)?.email}} </small>
+                        </h3>
+                    </md-list-item>
+                 </md-list>
+           </md-card-content>
+       </md-card>
+ </div>

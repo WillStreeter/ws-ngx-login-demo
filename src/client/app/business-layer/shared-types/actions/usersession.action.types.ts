@@ -1,0 +1,9 @@
+export const APP_START_CLEAR_LOGIN = '[UserSessionAction] starting app temp solution clear previous login';
+export const LOGIN_USER_ATTEMPT = '[UserSessionAction] attempt user log in';
+export const LOGIN_USER_FAILURE = '[UserSessionAction] failed user log in';
+export const LOGIN_USER_SUCCESS = '[UserSessionAction] successful user log in';
+export const LOGOUT_USER_ATTEMPT = '[UserSessionAction] attempt user log out';
+export const LOGOUT_USER_SUCCESS = '[UserSessionAction] success user log out';
+export const LOGOUT_USER_FAILURE = '[UserSessionAction] failure user log out';
+export const GET_SESSION_USER_ATTEMPT = '[UserSessionAction] get authorized user attempt';
+export const GET_SESSION_USER_SUCCESS = '[UserSession] get authorized user success';
